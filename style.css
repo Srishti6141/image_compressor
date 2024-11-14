@@ -1,0 +1,94 @@
+/* importing google fonts poppins */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ultra&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #927DFC;
+}
+.content {
+    width: 450px;
+    height: 255px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: height 0.2s ease;
+}
+.content.active{
+    height: 450px; 
+}
+.content .upload_box{
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px dashed #afafaf;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.content .upload_box img{
+    height:80px;
+} 
+.content.active .upload_box img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.content .main_content{
+    opacity: 0; 
+    pointer-events: none;
+}
+.content.active .main_content{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+.content.active .upload_box p{
+    display: none;
+}
+.content.active .upload_box{
+    border: none;
+}
+/* .content .main_content .row .column{
+    display: flex;
+    width: calc(100% / 2-10px);
+} */
+.main_content .row{
+    display: flex;
+    justify-content: space-between;
+}
+.main_content .row .column{
+    width: calc(100% / 2 - 35px);
+}
+.main_content .sizes .column input{
+    height: 45px;
+    border: 2px solid #927DFC;
+    border-radius: 5px;
+}
+.download-btn{
+    width: 400px;
+    height: 30px;
+    background-color: #927DFC;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 3em;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.main_content .checkboxes input{
+    margin-top: 10px;
+    accent-color: #927DFC;
+}
+
+
